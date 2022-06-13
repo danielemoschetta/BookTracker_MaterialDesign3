@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="@string/book_settings_category">
+
+        <Preference
+            android:key="@string/export_books_key"
+            android:title="@string/export_books_title"
+            android:summary="@string/export_books_summary"
+            app:icon="@drawable/ic_import"/>
+
+        <Preference
+            android:key="@string/import_books_key"
+            android:title="@string/import_books_title"
+            android:summary="@string/import_books_summary"
+            app:icon="@drawable/ic_export"/>
+
+        <Preference
+            android:key="@string/clear_books_key"
+            android:title="@string/clear_books_title"
+            android:summary="@string/clear_books_summary"
+            app:icon="@drawable/ic_clear"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/look_settings_category">
+
+        <DropDownPreference
+            android:key="@string/app_theme_key"
+            android:title="@string/app_theme_title"
+            android:entries="@array/app_theme_entries"
+            android:entryValues="@array/app_theme_values"
+            android:defaultValue="@string/system"
+            app:useSimpleSummaryProvider="true"
+            app:icon="@drawable/ic_app_theme" />
+
+        <SwitchPreferenceCompat
+            android:key="@string/dynamic_colors_key"
+            android:title="@string/dynamic_colors_title"
+            android:summary="@string/dynamic_colors_summary"
+            android:defaultValue="true"
+            app:icon="@drawable/ic_dynamic_colors"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/app_info_category">
+
+        <Preference
+            android:key="@string/app_version_key"
+            android:title="@string/app_version_title"
+            android:selectable="false"
+            app:useSimpleSummaryProvider="true"
+            app:icon="@drawable/ic_version" />
+
+        <Preference
+            android:title="@string/app_developers_title"
+            android:selectable="false"
+            android:summary="@string/app_developers_summary"
+            app:icon="@drawable/ic_developers" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

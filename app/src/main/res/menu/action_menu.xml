@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:id="@+id/list_action_group"
+        android:visible="false">
+        <item
+            android:id="@+id/action_search"
+            android:icon="@drawable/ic_search"
+            android:title="@string/search_books"
+            app:showAsAction="ifRoom|collapseActionView"
+            app:actionViewClass="androidx.appcompat.widget.SearchView" />
+        <item
+            android:id="@+id/action_sort"
+            android:icon="@drawable/ic_sort"
+            android:title="@string/sort_books"
+            app:showAsAction="ifRoom">
+            <menu>
+                <group
+                    android:id="@+id/column_action_group"
+                    android:checkableBehavior="single">
+                    <item
+                        android:title="@string/sorting_column"
+                        android:enabled="false"
+                        android:checkable="false" />
+                    <item
+                        android:id="@+id/action_by_title"
+                        android:title="@string/title" />
+                    <item
+                        android:id="@+id/action_by_author"
+                        android:title="@string/author" />
+                    <item
+                        android:id="@+id/action_by_year"
+                        android:title="@string/year" />
+                    <item
+                        android:id="@+id/action_by_progress"
+                        android:title="@string/read_progress"
+                        android:visible="false" />
+                </group>
+                <group
+                    android:id="@+id/order_action_group"
+                    android:checkableBehavior="single">
+                    <item
+                        android:title="@string/sorting_order"
+                        android:enabled="false"
+                        android:checkable="false" />
+                    <item
+                        android:id="@+id/action_asc"
+                        android:title="@string/asc" />
+                    <item
+                        android:id="@+id/action_desc"
+                        android:title="@string/desc" />
+                </group>
+            </menu>
+        </item>
+    </group>
+
+    <group
+        android:id="@+id/default_action_group"
+        android:visible="false">
+        <item
+            android:id="@+id/action_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings"
+            app:showAsAction="ifRoom" />
+    </group>
+
+    <group
+        android:id="@+id/book_detail_action_group"
+        android:visible="false">
+        <item
+            android:id="@+id/action_share_book"
+            android:icon="@drawable/ic_share"
+            android:title="@string/share_book"
+            app:showAsAction="ifRoom" />
+
+        <item
+            android:id="@+id/action_delete_book"
+            android:icon="@drawable/ic_delete"
+            android:title="@string/delete_book"
+            app:showAsAction="ifRoom" />
+    </group>
+
+</menu>

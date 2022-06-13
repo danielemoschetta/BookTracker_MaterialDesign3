@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.booklist.BookListFragment"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_empty_list_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/content_margin"
+            android:text="@string/empty_list_placeholder"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:textAlignment="center" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ch_group"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/ch_not_read"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/text_margin"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="@string/not_read"
+                        android:textAlignment="center"
+                        app:checkedIconTint="?attr/colorControlNormal"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/ch_reading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/text_margin"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="@string/reading"
+                        android:textAlignment="center"
+                        app:checkedIconTint="?attr/colorControlNormal"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/ch_read"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/text_margin"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="@string/read"
+                        android:textAlignment="center"
+                        app:checkedIconTint="?attr/colorControlNormal"
+                        style="@style/Widget.MaterialComponents.Chip.Filter"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rw_book_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/book_item"
+                    android:transitionGroup="true" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab_add_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/content_margin"
+            android:layout_marginBottom="@dimen/content_margin"
+            android:contentDescription="@string/add_book"
+            android:elevation="@dimen/elevation"
+            android:text="@string/add_book"
+            app:icon="@drawable/ic_add" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="@dimen/line_thickness"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/detail_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:name="com.unipd.booktracker.ui.bookdetail.BookDetailFragment" />
+
+</LinearLayout>

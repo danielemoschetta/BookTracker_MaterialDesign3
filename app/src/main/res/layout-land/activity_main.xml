@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.navigationrail.NavigationRailView
+        android:id="@+id/rail_nav"
+        style="@style/Widget.Material3.AppBarLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/nav_menu"
+        app:menuGravity="center" />
+
+    <!-- defaultNavHost is set to false, this way navHost is not handling back button and custom behaviour can be implemented -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:defaultNavHost="false"
+        app:navGraph="@navigation/nav_graph" />
+
+</LinearLayout>

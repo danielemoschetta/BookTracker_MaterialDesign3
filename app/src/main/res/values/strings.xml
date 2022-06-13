@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">BookTracker</string>
+    <!-- Fragment titles -->
+    <string name="library">Library</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="stats">Stats</string>
+    <string name="settings">Settings</string>
+    <string name="book_detail">Book details</string>
+    <string name="add_book">Add book</string>
+    <!-- Actions -->
+    <string name="sort_books">Sort</string>
+    <string name="search_books">Search</string>
+    <string name="share_book">Share book</string>
+    <string name="delete_book">Delete book</string>
+    <!-- Sorting -->
+    <string name="sorting_column">Field</string>
+    <string name="sorting_order">Sorting</string>
+    <string name="read_progress">Read progress</string>
+    <string name="asc">Ascending</string>
+    <string name="desc">Descending</string>
+    <!-- Filter chips -->
+    <string name="not_read">Not read</string>
+    <string name="reading">Reading</string>
+    <string name="read">Read</string>
+    <!-- Book info -->
+    <string name="title">Title</string>
+    <string name="author">Author</string>
+    <string name="category">Category</string>
+    <string name="language">Language</string>
+    <string name="year">Year</string>
+    <string name="pages">Pages</string>
+    <string name="description">Description</string>
+    <string name="publisher">Publisher</string>
+    <string name="isbn" translatable="false">ISBN</string>
+    <!-- Stats -->
+    <string name="today">Today</string>
+    <string name="this_year">This year</string>
+    <string name="total">Total</string>
+    <!-- Search hint -->
+    <string name="search_hint">Search title or author</string>
+    <string name="add_book_hint">Search book</string>
+    <!-- Placeholders -->
+    <string name="ph_percentage" translatable="false">%s%%</string>
+    <string name="ph_read_pages">Read pages %s</string>
+    <string name="ph_read_books">Read books %s</string>
+    <string name="ph_than_usual">%s compared to the average</string>
+    <string name="ph_most_read">Most read: %s</string>
+    <string name="ph_total">Total %s</string>
+    <!-- Toasts -->
+    <string name="book_deleted">Book deleted</string>
+    <string name="all_books_deleted">All the books have been deleted</string>
+    <string name="file_exported">File exported %s</string>
+    <string name="file_exported_error">An error occurred while exporting the file</string>
+    <string name="file_imported">File importing succeeded</string>
+    <string name="file_imported_error">An error occurred while importing the file</string>
+    <string name="network_error">Please check that network connection is available</string>
+    <string name="books_api_error">An error occurred while connecting to Books API</string>
+    <!-- Settings -->
+    <string name="book_settings_category">Books</string>
+    <string name="export_books_title">Export books</string>
+    <string name="export_books_summary">Export the book database to the Download folder</string>
+    <string name="import_books_title">Import books</string>
+    <string name="import_books_summary">Select a file from which to import the book database</string>
+    <string name="clear_books_title">Delete all books</string>
+    <string name="clear_books_summary">Delete books from both Library and Wishlist</string>
+    <string name="look_settings_category">App appearance</string>
+    <string name="app_theme_title">Choose the app theme</string>
+    <string-array name="app_theme_entries">
+        <item>System</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+    <string name="system" translatable="false">system</string>
+    <string name="light" translatable="false">light</string>
+    <string name="dark" translatable="false">dark</string>
+    <string-array name="app_theme_values" translatable="false">
+        <item>@string/system</item>
+        <item>@string/light</item>
+        <item>@string/dark</item>
+    </string-array>
+    <string name="dynamic_colors_title">Dynamic colors</string>
+    <string name="dynamic_colors_summary">The choice will be applied the next time the application is restarted</string>
+    <string name="app_info_category">App info</string>
+    <string name="app_version_title">Version</string>
+    <string name="app_developers_title">Developers</string>
+    <string name="app_developers_summary" translatable="false">Bolzonello Enrico\nMoschetta Daniele\nZanini Fabio</string>
+    <!-- Dialog -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="retry">Retry</string>
+    <string name="delete_book_dialog_title">Delete book</string>
+    <string name="delete_book_dialog_message">Are you sure you want to delete \"%s\"?</string>
+    <string name="clear_books_dialog_title">Delete all the books</string>
+    <string name="clear_books_dialog_message">Are you sure you want to delete all the books?</string>
+    <!-- Content placeholders -->
+    <string name="empty_list_placeholder">There are no books to display</string>
+    <string name="empty_detail_placeholder">Select a book from the list to display it</string>
+    <!-- Content description -->
+    <string name="book_thumbnail">Book thumbnail</string>
+    <!-- Preference keys-->
+    <string name="read_books_key" translatable="false">read_books</string>
+    <string name="not_read_books_key" translatable="false">not_read_books</string>
+    <string name="reading_books_key" translatable="false">reading_books</string>
+    <string name="sorting_asc_key" translatable="false">sorting_asc</string>
+    <string name="sorting_column_key" translatable="false">sorting_column</string>
+    <string name="export_books_key" translatable="false">export_books</string>
+    <string name="import_books_key" translatable="false">import_books</string>
+    <string name="clear_books_key" translatable="false">clear_books</string>
+    <string name="app_theme_key" translatable="false">app_theme</string>
+    <string name="dynamic_colors_key" translatable="false">dynamic_colors</string>
+    <string name="app_version_key" translatable="false">app_version</string>
+    <!-- Transition names -->
+    <string name="book_item_transition" translatable="false">book_item_transition_%s</string>
+    <string name="book_detail_transition" translatable="false">book_detail_transition</string>
+</resources>
